@@ -1,0 +1,11 @@
+--- dwm.c.orig	2020-03-13 15:47:47.539963512 +0100
++++ dwm.c	2020-03-13 15:49:37.563295429 +0100
+@@ -1752,7 +1752,7 @@
+ 	if (!c)
+ 		return;
+ 	grabbuttons(c, 0);
+-	XSetWindowBorder(dpy, c->win, scheme[SchemeNorm][ColBorder].pixel);
++	XSetWindowBorder(dpy, c->win, 0);
+ 	if (setfocus) {
+ 		XSetInputFocus(dpy, root, RevertToPointerRoot, CurrentTime);
+ 		XDeleteProperty(dpy, root, netatom[NetActiveWindow]);
